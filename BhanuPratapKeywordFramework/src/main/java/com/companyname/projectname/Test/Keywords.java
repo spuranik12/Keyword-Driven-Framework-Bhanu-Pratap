@@ -21,7 +21,9 @@ public class Keywords extends Resources
 	public static WebElement getLocator(String locator) throws Exception {
 		String[] split = locator.split(":");
 		String locatorType = split[0];
+		System.out.println("locator type:- "+locatorType);
 		String locatorValue = split[1];
+		System.out.println("locator value:- "+locatorValue); 
 
 		if (locatorType.toLowerCase().equals("id"))
 			return driver.findElement(By.id(locatorValue));
